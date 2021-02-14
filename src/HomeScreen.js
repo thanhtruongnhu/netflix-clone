@@ -1,40 +1,31 @@
 import React from 'react';
+import Banner from './Banner';
 import './HomeScreen.css';
 import Nav from './Nav';
+import requests from './Request';
+import Row from './Row';
 
 function HomeScreen() {
-	return <div className="homeScreen">
-        {/*Nav */}
-        <Nav />
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
+	return (
+		<div className="homeScreen">
+			<Nav />
 
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        <h1>TEST</h1>
+			<Banner />
 
-        <h1>TEST</h1>
-        <h1>TEST</h1>
-        
-        {/*Banner */}
-
-
-        {/*Row */}
-        </div>;
+			<Row
+				title="NETFLIX ORIGINALS"
+				fetchUrl={requests.fetchNetflixOriginals}
+				isLargeRow
+			/>
+			<Row title="Rending now" fetchUrl={requests.fetchTrending} />
+			<Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
+			<Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
+			<Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
+			<Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
+			<Row title="Romance Movies" fetchUrl={requests.fetchHorrorMovies} />
+			<Row title="Documentaries" fetchUrl={requests.FetchDocumentaries} />
+		</div>
+	);
 }
 
 export default HomeScreen;
