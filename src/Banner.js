@@ -43,7 +43,7 @@ function Banner() {
 				</div>
 				<h1 className="banner__description">
 					{truncate(
-						`This is a test description his is a test description his is a test description his is a test description his is a test descriptionhis is a test descriptionhis is a test descriptionhis is a test descriptionhis is a test descriptionhis is a test descriptionhis is a test description`,
+						`${movie?.overview}`,
 						150
 					)}
 				</h1>
