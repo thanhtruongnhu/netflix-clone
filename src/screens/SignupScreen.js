@@ -6,8 +6,6 @@ function SignupScreen() {
 	const emailRef = useRef(null);
 	const passwordRef = useRef(null);
 
-
-
 	const register = (e) => {
 		e.preventDefault(); /*Prevent refreshing this const in every render (stop redirect onto homepage when clicking on button element)*/
 
