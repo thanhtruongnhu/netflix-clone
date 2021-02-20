@@ -44,11 +44,16 @@
 .profileScreen__signOut {
     padding: 10px 20px;
     font-size: 1rem;
-    margin-top: 2.5%;
+    margin-top: 5%;
     width: 100%;
     color: #fff;
     background-color: #e50914;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.profileScreen__plans > h3 {
+    border-bottom: 1px solid #282c2d;
+    padding-bottom: 10px;
 }
